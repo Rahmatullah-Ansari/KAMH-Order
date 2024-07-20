@@ -1,0 +1,56 @@
+﻿<Window x:Class="KAMH_Order_Sender.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KAMH_Order_Sender"
+        mc:Ignorable="d"
+        Icon="/Resources/Order.ico"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="SingleBorderWindow"
+        ResizeMode="CanMinimize"
+        Background="LimeGreen"
+        Title="KAMH Order Sender" Height="550" Width="500">
+    <Grid x:Name="MainGrid">
+        <Border Margin="0,3,0,3" Background="White">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <StackPanel Orientation="Vertical" Grid.Row="0">
+                    <TextBlock Text="Please Enter Instagram Post Url.Multiple Post Url Can be given with new line as well as comma separated."
+                               HorizontalAlignment="Center"
+                               Margin="20,10,20,10"
+                               TextWrapping="Wrap"
+                               FontSize="14"/>
+                    <TextBox MaxHeight="250" ScrollViewer.VerticalScrollBarVisibility="Auto"
+                                 ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                                 Padding="5"
+                                AcceptsReturn="True"
+                                 Text="{Binding Details.Urls,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                 MinHeight="150"
+                                 Margin="20,10,20,10"/>
+                    <Button Content="Place An Order" HorizontalAlignment="Center"
+                            FontSize="14"
+                            BorderBrush="Red"
+                            Command="{Binding PlaceOrderCommand}"
+                            FontWeight="Bold"
+                            Foreground="Green"
+                            Padding="3"/>
+                </StackPanel>
+                <ListView Grid.Row="1" VirtualizingPanel.IsVirtualizing="True"
+                          Margin="5"
+                          HorizontalContentAlignment="Stretch"
+                          ItemsSource="{Binding Orders,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Date" Width="120" DisplayMemberBinding="{Binding PlacedTime}"/>
+                            <GridViewColumn Header="Message" Width="150" DisplayMemberBinding="{Binding Message}"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
