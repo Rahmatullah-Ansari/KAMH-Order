@@ -13,7 +13,7 @@ namespace KAMH_Order_Sender.Utility
         public static string OrderBody(string InstagramPostUrl) => $"{{\"post_url\":\"{InstagramPostUrl}\"}}";
         public static string GetTempPath()
         {
-            var path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"kAMH Orders");
+            var path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"KAMH Orders");
             DirectoryUtility.CreateDirectory(path);
             return path;
         }
