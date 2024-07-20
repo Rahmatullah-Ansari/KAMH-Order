@@ -44,7 +44,7 @@ namespace KAMH_Order_Sender.ViewModel
                 await Task.Delay(TimeSpan.FromSeconds(3));
             }
             FileUtility.SaveOrder(text);
-            Model.Urls = string.Empty;
+            Details.Urls = string.Empty;
         }
 
         private async Task<List<string>> GetUrlsCollections()
@@ -77,7 +77,7 @@ namespace KAMH_Order_Sender.ViewModel
         public OrderDetails Details
         {
             get=> details;
-            set=>SetProperty(ref details, value);
+            set=>SetProperty(ref details, value,nameof(Details));
         }
         public OrderDetails Model=>Details;
         private ObservableCollection<OrderDetails> _orders=new ObservableCollection<OrderDetails>();

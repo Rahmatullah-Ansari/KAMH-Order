@@ -32,7 +32,7 @@ namespace KAMH_Order_Sender.Model
         public string Urls
         {
             get => urls;
-            set => SetProperty(ref urls, value);
+            set => SetProperty(ref urls, value,nameof(Urls));
         }
     }
 }
