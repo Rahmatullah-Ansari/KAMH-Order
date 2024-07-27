@@ -7,7 +7,6 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Input;
 
 namespace KAMH_Order_Sender.ViewModel
@@ -34,7 +33,7 @@ namespace KAMH_Order_Sender.ViewModel
             var text = "Date Time | Order ID | Post URL \n";
             foreach (var Url in UrlsCollection)
             {
-                var response = await helper.PostRequestAsync(Constants.OrderAPI,Constants.OrderBody(Url));
+                var response = await helper.PostRequestAsync(Constants.OrderAPI,Constants.OrderBody(Url,Model.CommentId));
                 var PlacedResponse = new OrderResponseHandler(response);
                 if (PlacedResponse != null && PlacedResponse.Success)
                 {
@@ -43,8 +42,9 @@ namespace KAMH_Order_Sender.ViewModel
                 }
                 await Task.Delay(TimeSpan.FromSeconds(3));
             }
-            FileUtility.SaveOrder(text);
-            Details.Urls = string.Empty;
+            if(UrlsCollection != null && UrlsCollection.Count > 0)
+                FileUtility.SaveOrder(text);
+            Model.Urls = string.Empty;
         }
 
         private async Task<List<string>> GetUrlsCollections()
@@ -77,7 +77,7 @@ namespace KAMH_Order_Sender.ViewModel
         public OrderDetails Details
         {
             get=> details;
-            set=>SetProperty(ref details, value,nameof(Details));
+            set=>SetProperty(ref details, value);
         }
         public OrderDetails Model=>Details;
         private ObservableCollection<OrderDetails> _orders=new ObservableCollection<OrderDetails>();

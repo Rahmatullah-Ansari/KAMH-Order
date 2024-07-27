@@ -15,7 +15,7 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_2DB97A32FB854AAFB6F7B0121C07E602"
+        "MsmKey" = "8:_16DDBA1CBBC741B883A763E15AD10519"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -23,12 +23,6 @@
         {
         "MsmKey" = "8:_2EB51156C3A520AAB865C993DBB2A328"
         "OwnerKey" = "8:_B90FB0ED29D14B54A96242747F9E2F13"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_7C24473A349743F68E31D48FC408CBDA"
-        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -45,8 +39,8 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_2EB51156C3A520AAB865C993DBB2A328"
+        "MsmKey" = "8:_F7C77450066A446AB60F3AED63C506E0"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -59,6 +53,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_DF28DD2CF803E1E295DA7B4F60E99CA3"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_2EB51156C3A520AAB865C993DBB2A328"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -79,6 +79,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -95,6 +103,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -124,10 +140,10 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2DB97A32FB854AAFB6F7B0121C07E602"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_16DDBA1CBBC741B883A763E15AD10519"
             {
-            "SourcePath" = "8:..\\KAMH Order Sender\\Resources\\Order.png"
-            "TargetName" = "8:Order.png"
+            "SourcePath" = "8:..\\KAMH Order Sender\\Resources\\Order.ico"
+            "TargetName" = "8:Order.ico"
             "Tag" = "8:"
             "Folder" = "8:_556B28F76AD4487A808259D7343F7394"
             "Condition" = "8:"
@@ -175,26 +191,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7C24473A349743F68E31D48FC408CBDA"
-            {
-            "SourcePath" = "8:..\\KAMH Order Sender\\Resources\\Order.ico"
-            "TargetName" = "8:Order.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_556B28F76AD4487A808259D7343F7394"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_DF28DD2CF803E1E295DA7B4F60E99CA3"
             {
             "AssemblyRegister" = "3:1"
@@ -224,6 +220,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F7C77450066A446AB60F3AED63C506E0"
+            {
+            "SourcePath" = "8:..\\KAMH Order Sender\\Resources\\Order.png"
+            "TargetName" = "8:Order.png"
+            "Tag" = "8:"
+            "Folder" = "8:_556B28F76AD4487A808259D7343F7394"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
         }
@@ -311,7 +327,7 @@
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:_7C24473A349743F68E31D48FC408CBDA"
+        "ARPPRODUCTICON" = "8:"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -414,9 +430,9 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_AB0577DC93B649AABE96F5BFF971552A"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_00094BEBA24544B6AEC951F8B9A2DE33"
             {
-            "Name" = "8:KAMH Order"
+            "Name" = "8:KANH Order Sender"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -425,7 +441,7 @@
             "Target" = "8:_B90FB0ED29D14B54A96242747F9E2F13"
             "Folder" = "8:_7954704C985147F7A75853769D09B265"
             "WorkingFolder" = "8:_7954704C985147F7A75853769D09B265"
-            "Icon" = "8:_7C24473A349743F68E31D48FC408CBDA"
+            "Icon" = "8:_16DDBA1CBBC741B883A763E15AD10519"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_C4A31DFF1EE241849B2A0762A5B1EBE4"
@@ -439,7 +455,7 @@
             "Target" = "8:_B90FB0ED29D14B54A96242747F9E2F13"
             "Folder" = "8:_9F726837B22543BE9875321054400185"
             "WorkingFolder" = "8:_7954704C985147F7A75853769D09B265"
-            "Icon" = "8:_7C24473A349743F68E31D48FC408CBDA"
+            "Icon" = "8:_16DDBA1CBBC741B883A763E15AD10519"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_EA383973B0CB4FEBA78322CDFA266E0D"
@@ -453,7 +469,7 @@
             "Target" = "8:_B90FB0ED29D14B54A96242747F9E2F13"
             "Folder" = "8:_78F4D0C59EF5459198DC7BBE73118439"
             "WorkingFolder" = "8:_7954704C985147F7A75853769D09B265"
-            "Icon" = "8:_7C24473A349743F68E31D48FC408CBDA"
+            "Icon" = "8:_16DDBA1CBBC741B883A763E15AD10519"
             "Feature" = "8:"
             }
         }
@@ -857,7 +873,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_B90FB0ED29D14B54A96242747F9E2F13"
             {
-            "SourcePath" = "8:..\\KAMH Order Sender\\obj\\Debug\\KAMH Order Sender.exe"
+            "SourcePath" = "8:..\\KAMH Order Sender\\obj\\Release\\KAMH Order Sender.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_7954704C985147F7A75853769D09B265"

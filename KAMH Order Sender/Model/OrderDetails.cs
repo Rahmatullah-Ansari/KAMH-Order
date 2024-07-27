@@ -32,7 +32,13 @@ namespace KAMH_Order_Sender.Model
         public string Urls
         {
             get => urls;
-            set => SetProperty(ref urls, value,nameof(Urls));
+            set => SetProperty(ref urls, value);
+        }
+        private string commentId;
+        public string CommentId
+        {
+            get => commentId;
+            set => SetProperty(ref commentId, value);
         }
     }
 }
